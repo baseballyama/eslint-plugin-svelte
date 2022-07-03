@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-security-policy" content=""><title>svelte/valid-compile</title><meta property="og:title" content="svelte/valid-compile" data-svelte="svelte-1le8brk"><meta property="og:description" content="disallow warnings when compiling." data-svelte="svelte-1le8brk"><meta name="description" content="disallow warnings when compiling." data-svelte="svelte-1le8brk">
+	<link rel="stylesheet" href="/eslint-plugin-svelte/_app/immutable/assets/pages/__layout.svelte-2bcd60b7.css">
+	<link rel="stylesheet" href="/eslint-plugin-svelte/_app/immutable/assets/ESLintCodeBlock-3beb5c4a.css">
+	<link rel="stylesheet" href="/eslint-plugin-svelte/_app/immutable/assets/linter-3d922392.css">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/start-759120e6.js">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/chunks/index-f154218a.js">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/chunks/index-f61c3b90.js">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/chunks/paths-396f020f.js">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/chunks/preload-helper-a0169a62.js">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/pages/__layout.svelte-effd7d22.js">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/chunks/rules-715edd37.js">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/pages/rules/valid-compile.md-a211eb7a.js">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/chunks/ESLintCodeBlock-98915dcc.js">
+	<link rel="modulepreload" href="/eslint-plugin-svelte/_app/immutable/chunks/linter-b7fa4a26.js">
+    <meta name="description" content="ESLint plugin for Svelte using AST" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/eslint-plugin-svelte/favicon.png"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://ota-meshi.github.io/eslint-plugin-svelte/favicon.png"
+    />
+    <meta property="og:site_name" content="eslint-plugin-svelte" />
+    <meta
+      property="og:description"
+      content="ESLint plugin for Svelte using AST"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="svelte">
+
+
+
+
+<header class="svelte-jet77t">
+  <div class="corner svelte-jet77t">
+    <div class="sidebar-button svelte-jet77t">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon svelte-jet77t"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class="svelte-jet77t"></path></svg>
+    </div>
+    <a href="/eslint-plugin-svelte/" class="home-link svelte-jet77t">
+      <img src="/eslint-plugin-svelte/_app/immutable/assets/logo-06fafbe9.svg" alt="Logo" class="svelte-jet77t">
+    </a>
+  </div>
+
+  <nav class="svelte-jet77t">
+    <svg viewBox="0 0 2 3" aria-hidden="true" class="svelte-jet77t"><path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" class="svelte-jet77t"></path></svg>
+    <ul class="svelte-jet77t">
+      <li class="svelte-jet77t">
+        <a sveltekit:prefetch href="/eslint-plugin-svelte/" class="svelte-jet77t">Home</a>
+      </li>
+      <li class="svelte-jet77t">
+        <a sveltekit:prefetch href="/eslint-plugin-svelte/user-guide/" class="svelte-jet77t">User Guide</a>
+      </li>
+      <li class="svelte-jet77t">
+        <a sveltekit:prefetch href="/eslint-plugin-svelte/rules/" class="svelte-jet77t">Rules</a>
+      </li>
+      <li class="svelte-jet77t">
+        <a sveltekit:prefetch href="/eslint-plugin-svelte/playground/" class="svelte-jet77t">Playground</a>
+      </li>
+    </ul>
+    <div class="nav-title svelte-jet77t">
+      <a sveltekit:prefetch href="/eslint-plugin-svelte/" class="svelte-jet77t">
+        <img src="/eslint-plugin-svelte/_app/immutable/assets/logo-06fafbe9.svg" alt="Logo" class="svelte-jet77t">eslint-plugin-svelte</a>
+    </div>
+    <svg viewBox="0 0 2 3" aria-hidden="true" class="svelte-jet77t"><path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" class="svelte-jet77t"></path></svg>
+  </nav>
+
+  <div class="corner svelte-jet77t">
+    <a href="https://github.com/ota-meshi/eslint-plugin-svelte" target="_blank" class="github-link svelte-jet77t" rel="noopener noreferrer">
+      <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-mark-github svelte-jet77t" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" class="svelte-jet77t" style="fill: #2c3e50;"></path></svg>
+    </a>
+  </div>
+</header>
+
+<aside class="svelte-gyzoew">
+    <ul class="sidebar-menu sidebar-menu--level1 svelte-wy32qo">
+  <li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/">Introduction</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/user-guide/">User Guide</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/">Available Rules</a>
+      <ul class="sidebar-menu sidebar-menu--level2 svelte-wy32qo">
+  <li class="sidebar-menu-item svelte-wy32qo">
+      <span class="sidebar-menu-item-title svelte-wy32qo">Possible Errors</span>
+      <ul class="sidebar-menu sidebar-menu--level3 svelte-wy32qo">
+  <li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-dupe-else-if-blocks/">svelte/no-dupe-else-if-blocks</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-dupe-style-properties/">svelte/no-dupe-style-properties</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-dynamic-slot-name/">svelte/no-dynamic-slot-name</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-not-function-handler/">svelte/no-not-function-handler</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-object-in-text-mustaches/">svelte/no-object-in-text-mustaches</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-shorthand-style-property-overrides/">svelte/no-shorthand-style-property-overrides</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-unknown-style-directive-property/">svelte/no-unknown-style-directive-property</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo active">
+      <a class="sidebar-menu-item-title svelte-wy32qo active" href="/eslint-plugin-svelte/rules/valid-compile/">svelte/valid-compile</a>
+      
+    </li>
+</ul>
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <span class="sidebar-menu-item-title svelte-wy32qo">Security Vulnerability</span>
+      <ul class="sidebar-menu sidebar-menu--level3 svelte-wy32qo">
+  <li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-at-html-tags/">svelte/no-at-html-tags</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-target-blank/">svelte/no-target-blank</a>
+      
+    </li>
+</ul>
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <span class="sidebar-menu-item-title svelte-wy32qo">Best Practices</span>
+      <ul class="sidebar-menu sidebar-menu--level3 svelte-wy32qo">
+  <li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/button-has-type/">svelte/button-has-type</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-at-debug-tags/">svelte/no-at-debug-tags</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-unused-svelte-ignore/">svelte/no-unused-svelte-ignore</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-useless-mustaches/">svelte/no-useless-mustaches</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/require-optimized-style-attribute/">svelte/require-optimized-style-attribute</a>
+      
+    </li>
+</ul>
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <span class="sidebar-menu-item-title svelte-wy32qo">Stylistic Issues</span>
+      <ul class="sidebar-menu sidebar-menu--level3 svelte-wy32qo">
+  <li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/first-attribute-linebreak/">svelte/first-attribute-linebreak</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/html-quotes/">svelte/html-quotes</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/indent/">svelte/indent</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/max-attributes-per-line/">svelte/max-attributes-per-line</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/mustache-spacing/">svelte/mustache-spacing</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/prefer-class-directive/">svelte/prefer-class-directive</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/prefer-style-directive/">svelte/prefer-style-directive</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/shorthand-attribute/">svelte/shorthand-attribute</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/shorthand-directive/">svelte/shorthand-directive</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/spaced-html-comment/">svelte/spaced-html-comment</a>
+      
+    </li>
+</ul>
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <span class="sidebar-menu-item-title svelte-wy32qo">Extension Rules</span>
+      <ul class="sidebar-menu sidebar-menu--level3 svelte-wy32qo">
+  <li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/no-inner-declarations/">svelte/no-inner-declarations</a>
+      
+    </li>
+</ul>
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <span class="sidebar-menu-item-title svelte-wy32qo">System</span>
+      <ul class="sidebar-menu sidebar-menu--level3 svelte-wy32qo">
+  <li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/comment-directive/">svelte/comment-directive</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/rules/system/">svelte/system</a>
+      
+    </li>
+</ul>
+    </li>
+</ul>
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/playground/">Playground</a>
+      
+    </li><li class="sidebar-menu-item svelte-wy32qo">
+      <a class="sidebar-menu-item-title svelte-wy32qo" href="/eslint-plugin-svelte/migration/">Migration</a>
+      
+    </li>
+</ul>
+  </aside>
+
+<main class="svelte-1yegtko">
+  <div class="main-content svelte-1yegtko">
+    
+		
+
+  <h1 id="svelte-valid-compile" tabindex="-1">
+
+
+<a href="/eslint-plugin-svelte/rules/valid-compile/#svelte-valid-compile">#</a> svelte/valid-compile</h1>
+<blockquote>
+<p>disallow warnings when compiling.</p>
+</blockquote>
+<ul>
+<li>⚙️ This rule is included in <code>&quot;plugin:svelte/recommended&quot;</code>.</li>
+</ul>
+<h2 id="rule-details" tabindex="-1"><a href="/eslint-plugin-svelte/rules/valid-compile/#rule-details">#</a> 📖 Rule Details</h2>
+<p>This rule uses Svelte compiler to check the source code.</p>
+<div class="eslint-code-block-default-content svelte-1f8zmys">
+  
+
+<pre class="language-svelte"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token comment">/* eslint svelte/valid-compile: &quot;error&quot; */</span>
+  <span class="token keyword">let</span> src <span class="token operator">=</span> <span class="token string">&quot;tutorial/image.gif&quot;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- ✓ GOOD --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token language-javascript"><span class="token punctuation">{</span>src<span class="token punctuation">}</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Rick Astley dances.<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+
+<span class="token comment">&lt;!-- ✗ BAD --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token language-javascript"><span class="token punctuation">{</span>src<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre>
+
+</div>
+
+<div class="eslint-code-block-root svelte-1f8zmys" style="height: 140px;">
+  <div class="eslint-editor svelte-h5aif9">
+  
+  
+
+  <div class="eslint-editor__tools svelte-h5aif9">
+    
+  </div>
+</div>
+  <div class="eslint-code-block-tools svelte-1f8zmys">
+    
+    <span style="margin-left: 16px;"></span>
+  </div>
+</div>
+<p>Note that we exclude reports for some checks, such as <code>missing-declaration</code>, and <code>dynamic-slot-name</code>, which you can check with different ESLint rules.</p>
+<h2 id="options" tabindex="-1"><a href="/eslint-plugin-svelte/rules/valid-compile/#options">#</a> 🔧 Options</h2>
+<pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;svelte/valid-compile&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;ignoreWarnings&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li><code>ignoreWarnings</code> … If set to <code>true</code>, ignores any warnings other than fatal errors reported by the svelte compiler.</li>
+</ul>
+<div class="eslint-code-block-default-content svelte-1f8zmys">
+  
+
+<pre class="language-svelte"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token comment">/* eslint svelte/valid-compile: [&quot;error&quot;, { ignoreWarnings: true }] */</span>
+  <span class="token keyword">let</span> src <span class="token operator">=</span> <span class="token string">&quot;tutorial/image.gif&quot;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- Ignore --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token language-javascript"><span class="token punctuation">{</span>src<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre>
+
+</div>
+
+<div class="eslint-code-block-root svelte-1f8zmys" style="height: 140px;">
+  <div class="eslint-editor svelte-h5aif9">
+  
+  
+
+  <div class="eslint-editor__tools svelte-h5aif9">
+    
+  </div>
+</div>
+  <div class="eslint-code-block-tools svelte-1f8zmys">
+    
+    <span style="margin-left: 16px;"></span>
+  </div>
+</div>
+<h2 id="version" tabindex="-1"><a href="/eslint-plugin-svelte/rules/valid-compile/#version">#</a> 🚀 Version</h2>
+<p>This rule was introduced in eslint-plugin-svelte v0.7.0</p>
+<h2 id="implementation" tabindex="-1"><a href="/eslint-plugin-svelte/rules/valid-compile/#implementation">#</a> 🔍 Implementation</h2>
+<ul>
+<li><a href="https://github.com/ota-meshi/eslint-plugin-svelte/blob/main/src/rules/valid-compile.ts" target="_blank">Rule source</a></li>
+<li><a href="https://github.com/ota-meshi/eslint-plugin-svelte/blob/main/tests/src/rules/valid-compile.ts" target="_blank">Test source</a></li>
+</ul>
+	
+  </div>
+</main>
+
+<footer class="svelte-eairo8">
+  <div class="footer-tools svelte-eairo8">
+    <div class="edit-link">
+      <a href="https://github.com/ota-meshi/eslint-plugin-svelte/edit/main/docs/rules/valid-compile.md" target="_blank" rel="noopener noreferrer" class="svelte-eairo8">Edit this page</a>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg>
+      </span>
+    </div>
+    <div class="last-updated svelte-eairo8">
+        <span class="prefix">Last Updated:</span>
+        <span class="time">7/3/2022, 11:40:47 PM</span>
+      </div>
+  </div>
+  <div class="footer-move svelte-eairo8">
+    <span class="prev">←<a href="/eslint-plugin-svelte/rules/no-unknown-style-directive-property/" class="svelte-eairo8">svelte/no-unknown-style-directive-property</a></span>
+    <span class="next svelte-eairo8"><a href="/eslint-plugin-svelte/rules/no-at-html-tags/" class="svelte-eairo8">svelte/no-at-html-tags</a>→
+      </span>
+  </div>
+  <div class="footer-text svelte-eairo8">
+    <span>This site was built with <a href="https://kit.svelte.dev/" target="_brank" class="svelte-eairo8">SvelteKit</a>.</span>
+  </div>
+</footer>
+
+
+		<script type="module" data-sveltekit-hydrate="1v2r8gn">
+		import { start } from "/eslint-plugin-svelte/_app/immutable/start-759120e6.js";
+		start({
+			target: document.querySelector('[data-sveltekit-hydrate="1v2r8gn"]').parentNode,
+			paths: {"base":"/eslint-plugin-svelte","assets":"/eslint-plugin-svelte"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "always",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [0, 34],
+				params: {},
+				routeId: "rules/valid-compile"
+			}
+		});
+	</script></div>
+  </body>
+</html>
