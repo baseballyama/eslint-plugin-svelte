@@ -10,6 +10,7 @@ import htmlSelfClosing from "../rules/html-self-closing"
 import indent from "../rules/indent"
 import maxAttributesPerLine from "../rules/max-attributes-per-line"
 import mustacheSpacing from "../rules/mustache-spacing"
+import namingConventionInKitRoutes from "../rules/naming-convention-in-kit-routes"
 import noAtDebugTags from "../rules/no-at-debug-tags"
 import noAtHtmlTags from "../rules/no-at-html-tags"
 import noDupeElseIfBlocks from "../rules/no-dupe-else-if-blocks"
@@ -53,6 +54,7 @@ export const rules = [
   indent,
   maxAttributesPerLine,
   mustacheSpacing,
+  namingConventionInKitRoutes,
   noAtDebugTags,
   noAtHtmlTags,
   noDupeElseIfBlocks,
