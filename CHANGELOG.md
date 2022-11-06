@@ -1,5 +1,11 @@
 # eslint-plugin-svelte
 
+## 2.12.1
+
+### Patch Changes
+
+- [#296](https://github.com/ota-meshi/eslint-plugin-svelte/pull/296) [`695e2e5`](https://github.com/ota-meshi/eslint-plugin-svelte/commit/695e2e50762bf004af9200d7d05958e5cea08f70) Thanks [@ota-meshi](https://github.com/ota-meshi)! - feat: improve reporting range for `svelte/html-self-closing` rule.
+
 ## 2.12.0
 
 ### Minor Changes
