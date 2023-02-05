@@ -1,5 +1,13 @@
 # eslint-plugin-svelte
 
+## 2.16.0
+
+### Minor Changes
+
+- [#358](https://github.com/ota-meshi/eslint-plugin-svelte/pull/358) [`3464f23`](https://github.com/ota-meshi/eslint-plugin-svelte/commit/3464f2340ee1a45a4f50900eafe6435af9ba2931) Thanks [@ota-meshi](https://github.com/ota-meshi)! - fix: update svelte-eslint-parser to v0.23
+
+- [#354](https://github.com/ota-meshi/eslint-plugin-svelte/pull/354) [`2f1d89a`](https://github.com/ota-meshi/eslint-plugin-svelte/commit/2f1d89a4cbb5845aa328f5889dd449c386f04bda) Thanks [@marekdedic](https://github.com/marekdedic)! - feat: added the `svelte/require-event-dispatcher-types` rule
+
 ## 2.15.0
 
 ### Minor Changes
